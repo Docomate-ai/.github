@@ -58,8 +58,6 @@ Gitanshu Sankhla (Solo Hacker so No Team)
 
 - I also faced a breakthrough moment while designing the scraping logic. Initially, I tried directly feeding code into the LLM, but it wasn’t scalable. The idea to build a custom repo scraper that parses file structure and contents with metadata into a vectorized knowledge base allowed me to scale the application to larger projects.
 
-- Another breakthrough came when I decided to use BackBlaze B2 for storing generated READMEs instead of a traditional database or S3 bucket. This provided an efficient, cost-effective, and scalable way to store and serve large markdown files.
-
 ---
 
 ## 🛠️ Tech Stack
@@ -71,13 +69,12 @@ Gitanshu Sankhla (Solo Hacker so No Team)
 |    Frontend     | React, React Query, TailwindCss, Typescript, ShadCN, React Markdown |
 |     Backend     |         NestJs, Typescript, TypeOrm, Langchain, Simple-Git          |
 |    Database     |                               MongoDb                               |
-|       API       |               Groq-Sdk, Jina Embeddings, HuggingFace                |
-|     Hosting     |                           Heroku, Vercel                            |
+|       API       |                      Groq-Sdk, Jina Embeddings                      |
+|     Hosting     |                        Heroku, Github-Pages                         |
 
 ### Sponsor Technologies Used (if any):
 
 - [x] **Groq:** _I utilized chat completion endpoint for generating readmes, and text-to-speech and speech-to-text along with chat completion to talk with codebase._
-- [ ] **Stellar:** _Payments, identity, or token usage_
 
 ---
 
@@ -87,8 +84,10 @@ Most important features of **_Docomate AI_** is:
 
 - ✅ Authentication and authorization for secure access to user resources.
 - ✅ Users can create projects, with each project supporting multiple READMEs, documentation files, and chats.
-- ✅ READMEs can be generated and stored securely on Docomate AI using BackBlaze B2 cloud storage
 - ✅ Built-in Markdown editor to edit and download READMEs at any time.
+- ✅ User can save and download their README's
+- ✅ Profile page where user can view and update their profile.
+- ✅ App settings, with settings user can change their app theme or reset their account password.
 
 ---
 
@@ -114,14 +113,12 @@ Most important features of **_Docomate AI_** is:
 - Node JS, Nest JS and Typescript.
 - API KEYS
 
-  |  **API Credentials**  |                              **Website**                              |
-  | :-------------------: | :-------------------------------------------------------------------: |
-  |  MongoDb Credentials  |         [MongoDb Atlas](https://www.mongodb.com/cloud/atlas/)         |
-  | SendGrid Credentials  |          [Sendgrid Mail Service](https://sendgrid.com/en-us)          |
-  | BackBlaze Credentials | [BackBlaze B2 Cloud Storage](https://www.backblaze.com/cloud-storage) |
-  |   HuggingFace Token   | [HuggingFace settings tokens](https://huggingface.co/settings/tokens) |
-  |  Jina Embeddingd API  |        [Jina v2 Embedding Modal](https://jina.ai/embeddings/)         |
-  |       Groq API        |             [Groq Console](https://console.groq.com/keys)             |
+  | **API Credentials**  |                      **Website**                       |
+  | :------------------: | :----------------------------------------------------: |
+  | MongoDb Credentials  | [MongoDb Atlas](https://www.mongodb.com/cloud/atlas/)  |
+  | SendGrid Credentials |  [Sendgrid Mail Service](https://sendgrid.com/en-us)   |
+  | Jina Embeddingd API  | [Jina v2 Embedding Modal](https://jina.ai/embeddings/) |
+  |       Groq API       |     [Groq Console](https://console.groq.com/keys)      |
 
 - To configure environment variables, navigate to the backend directory and copy .env.development.sample to .env.development. Then, paste your API keys from the above links.
 
@@ -164,10 +161,17 @@ npm run dev
 
 Docomate AI v1.0.0 successfully addresses two major developer pain points: generating GitHub documentation (README) and understanding complex codebases. In future iterations, I plan to introduce the following features:
 
-- Auto-generating API documentation following the OpenAPI standard.
-- A service similar to Docsify for creating client and developer documentation.
-- Multilingual support for codebase interactions.
-- Subscription-based access to premium AI models and features.
+#### Coming Soon
+
+- **Talk with Codebase**: This feature is expected to release before 25th April 2025. This is our another primary feature which enables user to talk with the project.
+- **Bring your own Model**: Few users may have pro subcription of Groq, and also it is not possible for me to handle all the request of users in production. So soon we will add a feature for user to add their Groq API keys, and select the model they want to use to generate their readme. (Expected Release: 30th April 2025)
+- **Prompt Customization and Section Addition**: As of right now user cannot give any prompt to AI model and also has limited choice for sections to add in README. But soon we will add a feature for user, where they can customize the prompt for existing section and can also add new Section they want in their readme.(Expected Release: Mid May)
+
+#### In Docomate AI v2.0.0 :
+
+- **Documentation Site Generation**: I am also planning to add a simple AI powered _documentation website_ generation feature, with which user can create their documentation site for large projects.
+- **OpenAPI docs generation**:Another feature we will add is auto-generating API documentation following the OpenAPI standard, using Groq sdk.
+- **Talk to codebase but in Native language**:Multilingual support for codebase interactions.
 
 ---
 
@@ -175,6 +179,6 @@ Docomate AI v1.0.0 successfully addresses two major developer pain points: gener
 
 Participating in **[Hackhazards'25](https://hackhazards.namespacecomm.in/)** has been an incredible journey. I truly stepped out of my comfort zone to create this powerful ~~project~~ product. I believe it has the potential to positively impact many developers.
 
-Huge thanks to the **[Namespacecomm community](https://github.com/namespacecomm)** and **[@pradeepto sarkar](https://github.com/pradeeptosarkar)** for organizing this amazing event. This was my first application integrating Generative AI models, a full RAG pipeline, and cloud storage.
+Huge thanks to the **[Namespacecomm community](https://github.com/namespacecomm)** and **[@pradeepto sarkar](https://github.com/pradeeptosarkar)** for organizing this amazing event. This was my first application integrating Generative AI model and a full RAG pipeline.
 
 Thank you!
