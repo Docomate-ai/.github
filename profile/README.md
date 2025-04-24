@@ -18,7 +18,7 @@ Writing code and debugging are the most exciting aspects of building any tech pr
 
 Docomate AI aims to solve this by allowing developers to effortlessly generate READMEs for their public GitHub repositories. There are no complex prompts or tedious forms—just paste your repo link, select the sections you want, and the README is generated in seconds.
 
-Another major challenge, especially for beginners exploring open-source projects, is understanding the structure of an unfamiliar codebase. With Docomate AI, users can chat with the codebase, ask questions, and get contextual insights, making navigation much easier.
+Another major challenge, especially for beginners exploring open-source projects, is understanding the structure of an unfamiliar codebase. With Docomate AI, users can **chat with the codebase**, ask questions, and get contextual insights, making navigation much easier.
 
 Currently, Docomate AI achieves around 55% - 65% accuracy for small to mid-scale projects and approximately 80% - 85% accuracy for micro-scale projects (repos with 4–7 files).
 
@@ -52,7 +52,7 @@ Gitanshu Sankhla (Solo Hacker so No Team)
 
 #### Any pivots, brainstorms, or breakthroughs during hacking
 
-- Initially, I wanted to only focus on generating README files from a GitHub repo link. However, during the hackathon, I realized that understanding someone else’s codebase is a much bigger problem for beginners. This led to a major pivot—I decided to implement a chat interface where users could talk with the codebase to understand it better.
+- Initially, I wanted to only focus on generating README files from a GitHub repo link. However, during the hackathon, I realized that understanding someone else’s codebase is a much bigger problem for beginners. This led to a major pivot—I decided to implement a chat interface where users could **chat with the codebase** to understand it better.
 
 - While experimenting with MongoDB’s vector search capabilities, I discovered that it didn’t suit my specific data structure. This unexpected limitation forced me to brainstorm an alternative. After extensive research and testing, I ended up building a custom cosine similarity search algorithm, which actually performed better in my use case.
 
@@ -64,23 +64,23 @@ Gitanshu Sankhla (Solo Hacker so No Team)
 
 ### Core Technologies Used:
 
-| **Techonology** |                                Tools                                |
-| :-------------: | :-----------------------------------------------------------------: |
-|    Frontend     | React, React Query, TailwindCss, Typescript, ShadCN, React Markdown |
-|     Backend     |         NestJs, Typescript, TypeOrm, Langchain, Simple-Git          |
-|    Database     |                               MongoDb                               |
-|       API       |                      Groq-Sdk, Jina Embeddings                      |
-|     Hosting     |                        Heroku, Github-Pages                         |
+| **Technology** |                                Tools                                |
+| :------------: | :-----------------------------------------------------------------: |
+|    Frontend    | React, React Query, TailwindCss, Typescript, ShadCN, React Markdown |
+|    Backend     |         NestJs, Typescript, TypeOrm, Langchain, Simple-Git          |
+|    Database    |                               MongoDb                               |
+|      API       |                      Groq-Sdk, Jina Embeddings                      |
+|    Hosting     |                        Heroku, Github-Pages                         |
 
 ### Sponsor Technologies Used (if any):
 
-- [x] **Groq:** _I utilized chat completion endpoint for generating readmes, and text-to-speech and speech-to-text along with chat completion to talk with codebase._
+- [x] **Groq:** _I utilized chat completion endpoint for generating READMEs and enabling chat with codebase._
 
 ---
 
 ## ✨ Key Features
 
-Most important features of **_Docomate AI_** is:
+Most important features of **_Docomate AI_** are:
 
 - ✅ Authentication and authorization for secure access to user resources.
 - ✅ Users can create projects, with each project supporting multiple READMEs, documentation files, and chats.
@@ -88,6 +88,7 @@ Most important features of **_Docomate AI_** is:
 - ✅ User can save and download their README's
 - ✅ Profile page where user can view and update their profile.
 - ✅ App settings, with settings user can change their app theme or reset their account password.
+- ✅ Chat with your codebase — users can ask questions and explore unfamiliar repositories with ease.
 
 ---
 
@@ -126,6 +127,8 @@ Most important features of **_Docomate AI_** is:
 
 #### Backend Installation
 
+**Better prefer [Backend Repository](https://github.com/Docomate-ai/docomate-ai-backend) for better instructions**
+
 ```bash
 # Clone the backend repository
 git clone https://github.com/Docomate-ai/docomate-ai-backend
@@ -143,6 +146,8 @@ npm run start:dev
 
 #### Frontend Installation
 
+**Better prefer [Frontend Repository](https://github.com/Docomate-ai/docomate-ai-frontend) for better instructions**
+
 ```bash
 # Clone the frontend repository
 git clone https://github.com/Docomate-ai/docomate-ai-frontend
@@ -155,25 +160,20 @@ npm install
 npm run dev
 ```
 
----
+## 🧬 **Future Scope**
 
-## 🧬 Future Scope
+Docomate AI v1.0.0 successfully addresses two major developer pain points: generating GitHub documentation (README) and understanding complex codebases through chatting with it. In future iterations, I plan to introduce the following features:
 
-Docomate AI v1.0.0 successfully addresses two major developer pain points: generating GitHub documentation (README) and understanding complex codebases. In future iterations, I plan to introduce the following features:
+### **Coming Soon**
 
-#### Coming Soon
+- **Bring your own Model:** Users with Groq pro subscriptions can use their own API keys and select the model of their choice. _(Expected Release: 30th April 2025)_
+- **Prompt Customization and Section Addition:** Users will be able to customize prompts and add new sections in the README. _(Expected Release: Mid May)_
 
-- **Talk with Codebase**: This feature is expected to release before 25th April 2025. This is our another primary feature which enables user to talk with the project.
-- **Bring your own Model**: Few users may have pro subcription of Groq, and also it is not possible for me to handle all the request of users in production. So soon we will add a feature for user to add their Groq API keys, and select the model they want to use to generate their readme. (Expected Release: 30th April 2025)
-- **Prompt Customization and Section Addition**: As of right now user cannot give any prompt to AI model and also has limited choice for sections to add in README. But soon we will add a feature for user, where they can customize the prompt for existing section and can also add new Section they want in their readme.(Expected Release: Mid May)
+### **In Docomate AI v2.0.0:**
 
-#### In Docomate AI v2.0.0 :
-
-- **Documentation Site Generation**: I am also planning to add a simple AI powered _documentation website_ generation feature, with which user can create their documentation site for large projects.
-- **OpenAPI docs generation**:Another feature we will add is auto-generating API documentation following the OpenAPI standard, using Groq sdk.
-- **Talk to codebase but in Native language**:Multilingual support for codebase interactions.
-
----
+- **Documentation Site Generation:** Generate full documentation sites for large-scale projects.
+- **OpenAPI docs generation:** Auto-generate API documentation following OpenAPI standards using Groq.
+- **Talk to codebase in native language:** Multilingual support for talk with codebases.
 
 ## 🏁 Final Words
 
