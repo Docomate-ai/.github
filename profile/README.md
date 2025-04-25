@@ -94,8 +94,8 @@ Most important features of **_Docomate AI_** are:
 
 ## 📽️ Demo & Deliverables
 
-- **Demo Video Link:** [Paste YouTube or Loom link here]
-- **Pitch Deck / PPT Link:** [Paste Google Slides / PDF link here]
+- **Demo Video Link:** [Youtube Video](https://www.youtube.com/watch?v=BiXWvZWazeE)
+- **Pitch Deck / PPT Link:** [Google Slides PPT](https://drive.google.com/file/d/1M_CYM7axJLfnkmvq57BdrR-BXSOxAdKajFUugV4Dgfk/view)
 
 ---
 
